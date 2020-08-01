@@ -5,8 +5,9 @@
   border: none;
   background-color: transparent;
   text-decoration: none;
+
   svg {
-    fill: inherit;
+    fill: currentColor;
     // border: none;
     // outline: none;
     &:hover,

@@ -96,6 +96,8 @@
 
   .text-item {
     position: absolute;
+    display: flex;
+    align-items: center;
     top: 0;
     bottom: 0;
     transform: translateY(100%);
@@ -103,10 +105,10 @@
     box-sizing: border-box;
 
     margin: 0;
-    padding: 77px 24px;
+    padding: 35px 24px;
 
-    font-size: 18px;
-    line-height: 1.56;
+    font-size: 16px;
+    line-height: 1.41;
     background-color: rgba(33, 150, 243, 0.9);
     color: #ffffff;
 
