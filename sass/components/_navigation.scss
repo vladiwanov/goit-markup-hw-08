@@ -1,0 +1,61 @@
+/* --------navigation--------- */
+.navigation {
+  // nav - список радиокнопок
+
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+
+  .item:not(:last-child) {
+    //  кнопка
+    margin-right: 8px;
+  }
+
+  .item:not(:nth-last-child(-n + 2)) {
+    margin-bottom: 15px;
+
+    @media screen and (min-width: $tablet) {
+      margin-bottom: 0;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    margin: 0;
+
+    justify-content: center;
+  }
+}
+
+.block-nav {
+  padding-bottom: 0;
+  margin: 60px 0 0;
+
+  @media screen and (min-width: $tablet) {
+    padding-bottom: 0;
+    margin: 80px 0 0;
+  }
+}
+
+.ref {
+  margin: 0;
+  border-radius: 4px;
+  border-color: $second-bgc;
+  border: none;
+  padding: 6px 22px;
+
+  background-color: $second-bgc;
+  line-height: 1.62;
+  text-align: center;
+  transition: $time-amount $timing-function;
+
+  &:hover,
+  &:focus {
+    background-color: $bgc-button-color;
+    color: $text-button-color;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.08),
+      0 3px 1px rgba(0, 0, 0, 0.1);
+  }
+}

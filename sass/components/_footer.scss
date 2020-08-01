@@ -1,0 +1,227 @@
+/*  -------------------------------------------- footer ----------------------------------- */
+footer {
+  // основной тег
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: $footer-bgc;
+  color: #ffffff;
+
+  .social-contacts {
+    margin: 0;
+  }
+
+  .social-link {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: $text-button-color;
+  }
+
+  .social-icon {
+    fill: currentColor;
+  }
+}
+
+.block {
+  // div - смысловое наполнение футера
+  margin: 0;
+  padding: 0;
+}
+
+.footer-text-style {
+  // adress - основной тег
+  margin: 20px auto 0;
+
+  width: 231px;
+  // text-align: center;
+  font-size: 14px;
+  line-height: 1.71;
+  font-style: normal;
+}
+
+.adress-text {
+  // p -  непосредственно адрес
+
+  padding: 0;
+  margin: 0;
+  color: #fff;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.71;
+
+  // text-align: center;
+  letter-spacing: 0.03rem;
+}
+
+.contacts {
+  // ul - список контактов , в нем адрес , тел , емайл
+  margin: 0;
+  padding: 0;
+
+  .link {
+    //  - a - куда писать и звонить
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .item {
+    // li - элемент списка контактов, в котором находится "а"
+
+    margin: 8px auto 0;
+  }
+}
+
+.logo-contacts {
+  margin-bottom: 60px;
+
+  @media screen and (max-width: 1199px) {
+    .item {
+      text-align: center;
+    }
+  }
+}
+.social {
+  margin-bottom: 60px;
+}
+
+.footer-title {
+  display: block;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.form-button {
+  margin: 0 auto 20px;
+
+  padding-left: 16px;
+
+  font-size: 16px;
+  line-height: 20px;
+
+  display: block;
+  width: 100%;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  background-color: inherit;
+  color: $primary-text-color;
+}
+
+.subscribing {
+  margin-right: 12px;
+}
+.copyright {
+  display: none;
+  font-size: 12px;
+  line-height: 2;
+  text-align: center;
+  letter-spacing: 0.03rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.button-icon {
+  padding: 0;
+  margin-left: 8px;
+  width: 24px;
+  height: 24px;
+  fill: $text-button-color;
+}
+
+.button-send {
+  display: flex;
+  width: 200px;
+  height: 50px;
+  padding: 0;
+  border: none;
+  border-radius: 4px;
+
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: $tablet) {
+  .logo-contacts {
+    margin: 0 165px 60px 0;
+  }
+
+  .social {
+    margin-bottom: 0;
+  }
+
+  .block {
+    // div - смысловое наполнение футера
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+  }
+
+  .form-button {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  footer {
+    // основной тег
+    box-sizing: border-box;
+    margin: 0;
+
+    padding-top: 45px;
+
+    background-color: $footer-bgc;
+    color: #ffffff;
+  }
+
+  // .footer-text-style {
+  //   // adress - основной тег
+
+  //   text-align: start;
+  // }
+
+  .logo-contacts {
+    margin-right: 69px;
+    margin: 0 69px 0 0;
+  }
+
+  .send-form {
+    display: flex;
+    align-items: center;
+    margin: 0;
+  }
+
+  .form-button {
+    width: 358px;
+  }
+
+  .social {
+    margin-right: 94px;
+  }
+
+  .contacts {
+    // ul - список контактов , в нем адрес , тел , емайл
+    margin: 0;
+    padding: 0;
+
+    .item {
+      margin-top: 9px;
+    }
+    .adress-text {
+      // p -  непосредственно адрес
+      margin: 20px 0 0 0;
+      padding: 0;
+
+      color: #fff;
+    }
+  }
+
+  .form-button {
+    margin: 0 12px 0 0;
+  }
+}

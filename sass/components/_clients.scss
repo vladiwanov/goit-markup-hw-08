@@ -1,0 +1,105 @@
+/* -------------------------clients---------------------------------------------- */
+.clients {
+  // ul - основной контент
+
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: -15px;
+
+  @media screen and (min-width: $desktop) {
+  margin: 0;}
+
+
+  // .item:not(:last-child) {
+  //   margin-right: 30px;
+  // }
+}
+
+.clients .item {
+  // li - элемент  основного контента
+  margin: 15px;
+  padding: 0;
+
+  width: calc((100% - 4 * 15px) / 2);
+
+  @media screen and (min-width: $tablet) {
+    width: calc((100% - 6 * 15px) / 3);
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: calc((100% - 12 * 15px) / 6);
+    margin: 0 15px;
+  }
+}
+.clients-icon {
+  // button - поле иконки, элемент списка
+  display: block;
+  width: 100%;
+  height: 88px;
+  background-color: $background-color;
+  border: 1px solid $icons-primary-color;
+  border-radius: 4px;
+  color: $icons-primary-color;
+  text-align: center;
+  margin: auto;
+  padding: 20px 0;
+  transition: $time-amount $timing-function;
+
+  &:hover,
+  &:focus {
+    border-color: $accent-color;
+    color: $accent-color;
+    outline: none;
+    cursor: pointer;
+  }
+
+  svg {
+    //  - иконка
+    padding: 0;
+    margin: 0;
+    border: none;
+    fill: currentColor;
+    // outline: 1px solid red;
+  }
+}
+
+// /* -------------------------clients---------------------------------------------- */
+// .clients {
+//   display: flex;
+//   padding: 0;
+//   margin: 0;
+
+//   .item:not(:last-child) {
+//     margin-right: 30px;
+//   }
+// }
+
+// .clients-icon {
+//   margin: 0;
+//   padding: 0;
+//   background-color: $background-color;
+//   width: 168px;
+//   height: 88px;
+//   border: 1px solid $icons-primary-color;
+
+//   border-radius: 4px;
+//   color: $icons-primary-color;
+//   transition: $time-amount $timing-function;
+
+//   &:hover,
+//   &:focus {
+//     border-color: $accent-color;
+//     color: $accent-color;
+//     outline: none;
+//     cursor: pointer;
+//   }
+
+//   svg {
+//     padding: 0;
+//     margin: 0;
+//     border: none;
+//     fill: currentColor;
+//     outline: 1p solid red;
+//   }
+// }

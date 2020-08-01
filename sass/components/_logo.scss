@@ -1,0 +1,25 @@
+/* ----------------logo------------------------- */
+.logo {
+  display: block;
+
+  color: #2196f3;
+  font-family: Raleway, cursive;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: calc(28 / 24);
+  letter-spacing: 0.03rem;
+  text-decoration: none;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 26px;
+    line-height: calc(31 / 26);
+  }
+}
+
+.logo-right {
+  color: $text-title-color;
+}
+.logo-reverse {
+  color: #ffffff;
+}

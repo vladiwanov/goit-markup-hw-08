@@ -1,0 +1,210 @@
+/* ---------- portfolio ------------ */
+.main-portfolio {
+  padding-top: 40px;
+
+  @media screen and(min-width:$tablet) {
+    padding-top: 15px;
+  }
+
+  @media screen and(min-width:$desktop) {
+    padding-top: 35px;
+  }
+
+  .portfolio {
+    // ul
+
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+
+    // @media screen and(min-width:$mobile) {
+    //   max-width: 450px; //new
+    // }
+
+    @media screen and(min-width:$tablet) {
+      margin: 0 -15px;
+    }
+    @media screen and(min-width:$desktop) {
+      justify-content: space-between;
+    }
+  }
+
+  .portfolio .item {
+    // li
+
+    width: 100%;
+    margin: 0 0 30px;
+    padding: 0;
+    border: 1px solid #eeeeee;
+
+    &:hover {
+      box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16),
+        0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
+    }
+
+    @media screen and(min-width:$tablet) {
+      width: calc((100% - 4 * 15px) / 2);
+      margin: 15px;
+    }
+
+    @media screen and(min-width:$desktop) {
+      width: calc((100% - 6 * 15px) / 3);
+      margin: 15px;
+    }
+
+    // &:not(:nth-child(3n)) {
+    //   margin-right: 30px;
+    // }
+
+    // &:not(:nth-last-child(-n + 3)) {
+    //   margin-bottom: 30px;
+    // }
+
+    &:hover .text-item {
+      transform: translateY(0);
+    }
+  }
+
+  .portfolio .link {
+    color: inherit;
+    text-decoration: none;
+    overflow: hidden;
+  }
+
+  .item-title {
+    padding: 20px 24px 4px;
+    text-align: start;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06rem;
+    text-transform: none;
+  }
+
+  .image {
+    position: relative;
+    overflow: hidden;
+
+    display: block;
+  }
+
+  .portfolio .text {
+    padding: 0 24px 20px;
+    font-size: 16px;
+    line-height: 1.87;
+  }
+
+  .text-item {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    transform: translateY(100%);
+
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 77px 24px;
+
+    font-size: 18px;
+    line-height: 1.56;
+    background-color: rgba(33, 150, 243, 0.9);
+    color: #ffffff;
+
+    transition: transform $time-amount $timing-function;
+
+    // .portfolio .item:hover & {
+    //   transform: translateY(0);
+    //   top: 0;
+    //   bottom: 0;
+    // }
+
+    @media screen and(min-width:$tablet) {
+      padding: 49px 24px;
+    }
+
+    @media screen and(min-width:$desktop) {
+      padding: 63px 24px;
+    }
+  }
+
+  // /* ---------- portfolio ------------ */
+  // .main-portfolio {
+  //   padding-top: 50px;
+  // }
+
+  // .portfolio {
+  //   margin: 0;
+  //   padding: 0;
+  //   display: flex;
+  //   flex-wrap: wrap;
+  // }
+
+  // .portfolio .item {
+  //   width: calc((100% - 66px) / 3);
+
+  //   border: 1px solid #eeeeee;
+
+  //   &:hover {
+  //     box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+  //       0px 1px 1px rgba(0, 0, 0, 0.12);
+  //   }
+
+  //   &:not(:nth-child(3n)) {
+  //     margin-right: 30px;
+  //   }
+
+  //   &:not(:nth-last-child(-n + 3)) {
+  //     margin-bottom: 30px;
+  //   }
+
+  //   &:hover .text-item {
+  //     transform: translateY(0%);
+  //   }
+  // }
+
+  // .portfolio .link {
+  //   color: inherit;
+  //   text-decoration: none;
+  //   overflow: hidden;
+  // }
+
+  // .item-title {
+  //   padding: 20px 24px 4px;
+
+  //   font-size: 18px;
+  //   line-height: 2;
+  //   letter-spacing: 0.06rem;
+  //   text-transform: none;
+  // }
+
+  // .image {
+  //   position: relative;
+  //   overflow: hidden;
+  // }
+  // .portfolio .text {
+  //   padding: 0 24px 20px;
+  //   font-size: 16px;
+  //   line-height: 1.87;
+  // }
+
+  // .text-item {
+  //   position: absolute;
+  //   top: 0;
+  //   right: 0;
+
+  //   box-sizing: border-box;
+  //   margin: 0;
+  //   padding: 63px 24px;
+
+  //   font-size: 18px;
+  //   line-height: 1.56;
+  //   background-color: rgba(33, 150, 243, 0.9);
+  //   color: #ffffff;
+  //   transform: translateY(100%);
+
+  //   transition: transform $time-amount $timing-function;
+
+  //   // .portfolio .item:hover & {
+  //   //   transform: translateY(0%);
+  //   // }
+}

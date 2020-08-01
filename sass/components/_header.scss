@@ -1,0 +1,398 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  background-color: $background-color;
+
+  padding: 10px 0 9px;
+  border-bottom: 1px solid #ececec;
+  z-index: 10;
+}
+
+.main-nav {
+  //. nav - основной контент хедера
+
+  // | - работает для лого и кнопки:
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+}
+
+//,  ----------------nav and contact us--------------------------- */
+
+//                 ? ----- новые классы для мобильного меню:
+.menu-container {
+  //. div  - общий  контейнер для всего списка выпадающего меню
+
+  padding: 60px 20px;
+  background-color: #fff;
+
+  text-align: center;
+  // overflow-y: scroll;
+}
+
+.menu-navigation {
+  //. div - контейнер для навигации по сайту
+  margin: 0;
+
+  .site-nav {
+    //. ul - список навигации
+    text-align: center;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.site-nav .item {
+  //. li - элемент списка , в котором ссылка и оформление
+  box-sizing: border-box;
+
+  &:not(:last-child) {
+    margin-bottom: 40px;
+  }
+}
+
+.nav-link {
+  //. a - ссылка в элементе навигации по сайту
+  display: inline-block;
+  // margin-bottom: 40px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.02rem;
+  color: $text-title-color;
+  transition: $time-amount $timing-function;
+
+  &:hover,
+  &:focus {
+    //. оформление ссылки при ховере/фокусе
+    color: $accent-color;
+    fill: $accent-color;
+  }
+}
+
+.nav-link.current {
+  //. обозначение текущей страницы
+  position: relative;
+  color: $accent-color;
+  margin-bottom: 12px;
+
+  &::after {
+    //. офомление ссылки текущей страницы при ховере/фокусе
+    position: absolute;
+    left: 0;
+    bottom: -12px;
+
+    content: '';
+    display: block;
+
+    width: 100%;
+    height: 4px;
+
+    border-radius: 2px;
+    background-color: currentColor;
+  }
+}
+
+//,------------------contacts-------------------------------
+
+.menu-contacts {
+  //. div  -  контейнер меню  для контактов
+  padding: 0;
+  margin: 60px 0 0;
+}
+
+.auth-nav {
+  //.   ul  - список элементов  контактов
+  padding: 0;
+  margin: 0 auto;
+
+  .item:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+.us {
+  //.  класс для "а" -  ссылки на контакты
+  border: none;
+  padding: 0;
+  margin: 0;
+  background-color: $background-color;
+  color: $primary-text-color;
+
+  fill: currentColor;
+  display: inline-block;
+  font-weight: 500;
+  // font-size: 14px;
+  // line-height: 1.14;
+  letter-spacing: 0.02rem;
+
+  transition: $time-amount $timing-function;
+
+  &:hover,
+  &:focus {
+    //. оформление для ссылки на контакты при ховере/фокусе
+    color: $accent-color;
+    fill: $accent-color;
+  }
+}
+
+.icon-us {
+  //. svg - иконка для ссылки на контакты
+  display: inline-flex;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+  align-items: flex-end;
+}
+//,-----------медиа запросы-----------------------------------
+
+@media screen and (max-width: 767px) {
+  header {
+  }
+
+  .menu-container {
+    display: none;
+    position: absolute;
+    top: calc(100% + 1px);
+    left: 0;
+
+    width: 100%;
+    height: max-content;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.08),
+      0px 4px 8px rgba(0, 0, 0, 0.04);
+
+    &.is-open {
+      display: block;
+    }
+  }
+}
+
+/* //| anivation for menu (example from lesson):
+//.| .backdrop {
+//.|opacity: 0;
+//.|visibility: hidden;
+//.| pointer-events: none;
+//.|transition: opacity 200ms linear, visibility 200ms linear;
+//.|
+//.| &.is-open {
+//.|display: block;
+//.|opacity: 1;
+//.|visibility: visible;
+//.|pointer-events: initial;
+//.|}
+//.|}
+
+//.|backdrop .content {
+//.|height: 100%;
+//.|width: 70%;
+//.|background-color: #fff;
+//.|transform: translateX(-100%);
+//.|transition: transform 200ms linear 150ms - (delay);
+//.|}
+//.| .backdrop.is-open .content {
+//.| transform: translateX(0%);
+//.| }
+ */
+
+//,--------------------tablet--------------------------------------------
+
+@media screen and (min-width: $tablet) {
+  header {
+    padding: 15px 0 14px;
+  }
+
+  .main-nav {
+    //. nav - основной контент хедера
+
+    // | - работает для лого и menu-container
+    display: flex;
+    align-items: center;
+
+    margin: 0;
+  }
+
+  .menu-container {
+    //. div  - общий  контейнер для всего списка выпадающего меню
+    display: flex;
+    align-items: center;
+
+    padding: 0;
+    margin: 0 0 0 81px;
+  }
+
+  //,  ----------------nav and contact us--------------------------- */
+
+  .menu-navigation {
+    //. div - контейнер для навигации по сайту
+    margin: 0;
+    padding: 0;
+  }
+
+  .site-nav {
+    //. ul - список навигации
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+
+    .item:not(:last-child) {
+      //. li - элемент списка , в котором ссылка и оформление
+      box-sizing: border-box;
+      margin: 0 50px 0 0;
+    }
+  }
+
+  .nav-link {
+    //. a - ссылка в элементе навигации по сайту
+    display: inline-block;
+    font-size: 14px;
+    line-height: calc (16 / 14);
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-link.current {
+    margin-bottom: 0;
+
+    &::after {
+      bottom: -33px;
+    }
+  }
+
+  //,------------------contacts-------------------------------
+  .menu-contacts {
+    //. div  -  контейнер меню  для контактов
+    padding: 0;
+    margin: 0 0 0 80px;
+    text-align: start;
+  }
+
+  .auth-nav {
+    //.   ul  - список элементов  контактов
+    padding: 0;
+    margin: 0;
+
+    .item:not(:last-child) {
+      margin: 0 0 5px 0;
+    }
+  }
+
+  .us {
+    //.  класс для "а" -  ссылки на контакты
+    font-size: 12px;
+    line-height: calc(14 / 12);
+  }
+}
+
+@media screen and (min-width: $desktop) /* -------------- */ {
+  header {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  .main-nav {
+    //. nav - основной контент хедера
+
+    // | - работает для лого и menu-container
+    display: flex;
+    align-items: center;
+    justify-content: start;
+
+    margin: 0;
+  }
+
+  .menu-container {
+    //. div  - общий  контейнер для всего списка выпадающего меню
+    margin: 0 0 0 85px;
+  }
+
+  .menu-contacts {
+    //. div  -  контейнер меню  для контактов
+    padding: 0;
+
+    margin: 0 0 0 302px;
+  }
+
+  .auth-nav {
+    padding: 0;
+    margin: 0;
+    display: flex;
+
+    align-items: center;
+
+    .item:not(:last-child) {
+      margin: 0 30px 0 0;
+    }
+  }
+
+  .nav-link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02rem;
+    color: $text-title-color;
+    transition: $time-amount $timing-function;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+      fill: $accent-color;
+    }
+  }
+
+  .current {
+    display: block;
+    position: relative;
+    color: $accent-color;
+
+    &::after {
+      position: absolute;
+      left: 0;
+      bottom: -32px;
+
+      content: '';
+      display: block;
+
+      width: 100%;
+      height: 4px;
+
+      border-radius: 2px;
+      background-color: currentColor;
+    }
+  }
+
+  .us {
+    border: none;
+    padding: 0;
+    margin: 0;
+    background-color: $background-color;
+    color: $primary-text-color;
+
+    fill: currentColor;
+    display: inline-block;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02rem;
+
+    transition: $time-amount $timing-function;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+      fill: $accent-color;
+    }
+  }
+
+  .icon-us {
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
+    align-items: flex-end;
+  }
+}
